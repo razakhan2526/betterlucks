@@ -1,0 +1,20 @@
+// Custom
+@use "custom";
+
+// Abstracts
+@use "abstracts/_abstracts-dir";
+
+// Base
+@use "base/_base-dir";
+
+// Components
+@use "components/_components-dir";
+
+// Layouts
+@use "layouts/_layouts-dir";
+
+// Pages
+@use "pages/_pages-dir";
+
+// Vendors
+@use "vendors/fontawesome";

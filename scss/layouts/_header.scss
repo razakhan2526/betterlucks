@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as *;
+
+.nav-menu{
+    background-color: transparent;
+    padding: 1rem 0rem;
+    .navbar-nav{
+        li{
+            margin-left: 10px;
+            margin-right: 10px;
+            a{
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: capitalize;
+                letter-spacing: 0.3px;
+                color: $secondary;
+                display: inline-block;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scale(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $primary;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+                &:hover{
+                    color: $primary;
+                    transition: transform 0.25s ease-out;
+                    &::after{
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+                    }
+                }
+            }
+        }
+    }
+}
